@@ -1,0 +1,11 @@
+{
+  "name": "jsFileDialog",
+  "url": "https://github.com/ngrebenshikov/jsFileDialog",
+  "license": "MIT",
+  "tags": [ "javascript", "file dialog"],
+  "description": "It opens the browser's file dialog and get the content of selected file.",
+  "version": "0.1",
+  "releasenote": "Added flat graphics and data binding to JAccordion, JTable, Dialog and JAdjuster",
+  "contributors": [ "ngrebenshikov" ],
+  "dependencies": {}
+}
