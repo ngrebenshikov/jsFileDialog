@@ -14,9 +14,13 @@ class FileDialog {
         return cast new JQuery("#"+INPUT_ID).get(0);
     }
 
-    public static function init(multiple: Bool = false, accept: String = null) {
+    public static function init(acceptFileTypes: Array<String> = null, multiple: Bool = false) {
         new JQuery("").ready(function(e) {
-            var input = new JQuery("<input id='" + INPUT_ID + "' type='file' style='display:none' ></input>");
+            var accept: String;
+            if (acceptFileTypes != null) {
+                accept = acceptFileTypes.toString();
+            } else accept = "";
+            var input = new JQuery("<input id='" + INPUT_ID + "' type='file' accept='" + accept + "' style='display:none' ></input>");
             input.appendTo("body");
             input.change(function(e) {
                 var f = inputElement.files[0];
